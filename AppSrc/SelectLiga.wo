@@ -160,5 +160,10 @@ Object oSelectLiga is a cWebView
 
     End_Procedure
 
-
+    Procedure OnNavigateForward tWebNavigateData NavigateData Integer hoInvokingView Integer hoInvokingObject
+        Forward Send OnNavigateForward NavigateData hoInvokingView hoInvokingObject
+        If (NavigateData.eNavigateType = nfFromChild) Begin
+           // Send ShowInfoBox ("FROM CHILD | Vista que invoca: " + Name(hoInvokingView) + " | Objeto que invoca: " + Name(hoInvokingObject)) "Tarea 2"
+        End
+    End_Procedure
 End_Object 
