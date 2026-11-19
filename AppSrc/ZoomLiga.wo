@@ -146,6 +146,7 @@ Object oZoomLiga is a cWebView
         Case Begin
             Case (NavigateData.eNavigateType = nfFromMain)
                 // If from main, this is a propbably a main file Select to Zoom.
+                                Send ShowInfoBox ("FROM MAIN | Vista que invoca: " + Name(hoInvokingView) + " | Objeto que invoca: " + Name(hoInvokingObject)) "Tarea 1"
                 Case Break
 
             Case (NavigateData.eNavigateType = nfFromParent)
